@@ -1,4 +1,2 @@
 #!/bin/bash
-
-name ="${{ variables.name}}"
-echo "printing the value: $name"
+echo "Printing the value: $name
