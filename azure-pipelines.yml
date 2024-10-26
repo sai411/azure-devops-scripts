@@ -6,8 +6,9 @@
 trigger:
 - main
 
+
 pool:
-  vmImage: ubuntu-latest
+  name: Azure Pipelines
 
 steps:
 - script: bash file.sh
