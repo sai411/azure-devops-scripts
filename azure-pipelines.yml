@@ -6,11 +6,7 @@
 trigger:
 - main
 
-parameters:
-  - name: csh
-    displayName: "Environment Variable for CX Search"
-    type: string
-    default: "qa05"
+
 pool:
   name: aws
 
