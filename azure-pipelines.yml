@@ -13,3 +13,5 @@ pool:
 steps:
 - script: bash file.sh
   displayName: 'Run a one-line script'
+  env:
+          name: ${{ variables.name }}
