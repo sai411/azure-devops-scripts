@@ -6,4 +6,4 @@ echo $CSH
 echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5"
 echo $csh
 
-echo "Printing $(CSH)"
+echo "Printing $CSH"
