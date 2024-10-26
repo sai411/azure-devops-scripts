@@ -13,5 +13,6 @@ echo "${env_vars[${DASHBOARD_ENV}_agentInfo_env]}"
 echo "${env_vars[${DASHBOARD_ENV}_account_search_url]}"
 echo "${env_vars[${CSH}_ovas_application_db_keyspace]}"
 
-# Example of accessing the variables dynamically
-echo "Printing dynamically: ${env_vars[${DASHBOARD_ENV}_agentInfo_env]}"
+for key in "${!env_vars[@]}"; do
+         value=${env_vars[$key]}
+         echo "Adding secret: $key with value: $value"
