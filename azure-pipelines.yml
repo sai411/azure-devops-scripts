@@ -8,9 +8,7 @@ trigger:
 
 
 pool:
-  name: Azure Pipelines
-  demands:
-        - agent.name -equals 'Hosted Agent'
+  name: aws
 
 steps:
 - script: bash file.sh
