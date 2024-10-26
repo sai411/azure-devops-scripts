@@ -6,12 +6,14 @@
 trigger:
 - main
 
-
+parameters:
+  - name: csh
+    displayName: "Environment Variable for CX Search"
+    type: string
+    default: "qa05"
 pool:
   name: aws
 
 steps:
 - script: bash file.sh
   displayName: 'Run a one-line script'
-  env:
-          name: ${{ variables.name }}
