@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Define variables
-agentInfo_env="${DASHBOARD_ENV}-agentInfo-env"
-account_search_url="${DASHBOARD_ENV}-account-search-url"
-ovas_application_db_keyspace="${CSH}-ovas-application-db-keyspace"
+# Declare associative array to store dynamic values
+declare -A env_vars
 
-# Assign values
-declare "${agentInfo_env}"="${DASHBOARD_ENV}"
-declare "${account_search_url}"="https://${CSH}-oneview-accountsearch.rogers.com/web/a/dashboard/account-search"
-declare "${ovas_application_db_keyspace}"="${DASHBOARD_ENV}_ute"
+# Populate associative array with keys that mimic your dynamic naming
+env_vars["${DASHBOARD_ENV}_agentInfo_env"]="${DASHBOARD_ENV}"
+env_vars["${DASHBOARD_ENV}_account_search_url"]="https://${CSH}-oneview-accountsearch.rogers.com/web/a/dashboard/account-search"
+env_vars["${CSH}_ovas_application_db_keyspace"]="${DASHBOARD_ENV}_ute"
 
-# Print the values
-echo "${!agentInfo_env}"
-echo "${!account_search_url}"
-echo "${!ovas_application_db_keyspace}"
+# Print values from the associative array
+echo "${env_vars[${DASHBOARD_ENV}_agentInfo_env]}"
+echo "${env_vars[${DASHBOARD_ENV}_account_search_url]}"
+echo "${env_vars[${CSH}_ovas_application_db_keyspace]}"
 
-# Example of using indirect reference
-echo "Printing dynamically: ${!agentInfo_env}"
+# Example of accessing the variables dynamically
+echo "Printing dynamically: ${env_vars[${DASHBOARD_ENV}_agentInfo_env]}"
