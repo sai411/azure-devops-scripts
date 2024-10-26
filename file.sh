@@ -1,4 +1,4 @@
 #!/bin/bash
-name=$1
+echo "Printing $(NAME)"
 echo "Printing the value: $name"
 echo "Environment: $csh"
