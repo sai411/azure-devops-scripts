@@ -9,6 +9,4 @@ ${DASHBOARD_ENV}-account-search-url__=https://${CSH}-oneview-accountsearch.roger
 ${CSH}-ovas-application-db-keyspace__=${DASHBOARD_ENV}_ute  
 
 
-echo ${${DASHBOARD_ENV}-agentInfo-env}
-echo ${${DASHBOARD_ENV}-account-search-url__}
-echo ${${CSH}-ovas-application-db-keyspace__}
+echo $(${DASHBOARD_ENV}-agentInfo-env)
