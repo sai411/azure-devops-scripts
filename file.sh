@@ -14,5 +14,6 @@ echo "${env_vars[${DASHBOARD_ENV}_account_search_url]}"
 echo "${env_vars[${CSH}_ovas_application_db_keyspace]}"
 
 for key in "${!env_vars[@]}"; do
-         value=${env_vars[$key]}
-         echo "Adding secret: $key with value: $value"
+    value=${env_vars[$key]}
+    echo "Adding secret: $key with value: $value"
+done
