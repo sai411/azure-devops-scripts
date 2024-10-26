@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: bah file.sh
+- script: bash file.sh
   displayName: 'Run a one-line script'
 
 - script: |
